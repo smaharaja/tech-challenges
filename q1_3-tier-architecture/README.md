@@ -20,22 +20,22 @@ set ARM_TENANT_ID=<<TENANT_ID>>
 
 # Terraform Commands-
 
-1. Initialize Terraform
-terraform --version
+1. Initialize Terraform  
+terraform --version  
 
-terraform init
+terraform init  
 
-2. Validate Terraform Structure
-terraform validate
+2. Validate Terraform Structure  
+terraform validate  
 
-3. Create Terraform Plan
-terraform plan -var-file="env-dev.tfvars"
+3. Create Terraform Plan  
+terraform plan -var-file="env-dev.tfvars"  
 
-4. Apply Terraform Plan
-terraform apply -var-file="env-dev.tfvars" -input=false -auto-approve
+4. Apply Terraform Plan  
+terraform apply -var-file="env-dev.tfvars" -input=false -auto-approve  
 
-5. Destroy the infrastructure if needed
-terraform destroy -var-file="env-dev.tfvars" -input=false -auto-approve
+5. Destroy the infrastructure if needed  
+terraform destroy -var-file="env-dev.tfvars" -input=false -auto-approve  
 
 
 
