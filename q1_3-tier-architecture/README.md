@@ -13,7 +13,7 @@ Local Environment Setup-
 In Command Prompt, Create Environment Variable  
 For Windows Cmd ==>  
 set ARM_CLIENT_ID=<<CLIENT_ID>>  
-set ARM_CLIENT_SECRET=<<SECRET>>  
+set ARM_CLIENT_SECRET=<<CLIENT_SECRET>>  
 set ARM_SUBSCRIPTION_ID=<<SUBSCRIPTION_ID>>  
 set ARM_TENANT_ID=<<TENANT_ID>>  
 
