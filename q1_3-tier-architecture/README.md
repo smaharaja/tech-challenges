@@ -22,7 +22,6 @@ set ARM_TENANT_ID=<<TENANT_ID>>
 
 1. Initialize Terraform  
 terraform --version  
-
 terraform init  
 
 2. Validate Terraform Structure  
