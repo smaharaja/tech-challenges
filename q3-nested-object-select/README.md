@@ -2,13 +2,14 @@
 Challenge 3 - We have a nested object. We would like a function where you pass in the object and a key
 and get back the value.
 
-Example inputs:
-object = {"a":{"b":{"c":"d"}}}
-key = a/b/c
-value = d
+Example inputs:  
+object = {"a":{"b":{"c":"d"}}}  
+key = a/b/c  
+value = d  
 
-object = {"x":{"y":{"z":"a"}}}
-key = x/y/z
+
+object = {"x":{"y":{"z":"a"}}}  
+key = x/y/z  
 value = a
 
 
