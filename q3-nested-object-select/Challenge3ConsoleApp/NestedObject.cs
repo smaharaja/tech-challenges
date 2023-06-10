@@ -39,12 +39,18 @@
 
 			var keyIndex = 0;
 			var currentObject = nestedObject;
+			var matchFoundStart = false;
 			while (keyIndex < keys.Length)
 			{
-				//If Keys Are Not Matching, Stop The Process
-				if (keys[keyIndex] != currentObject.Key)
+				//If We Found The First Key In The Objects, Mark It For The Match Start
+				if (keys[keyIndex] == currentObject.Key)
+					matchFoundStart = true;
+
+				//If Keys Are Not Matching After Match Start, Stop The Process
+				if (keys[keyIndex] != currentObject.Key && matchFoundStart)
 					break;
 
+				//If Keys Are Matching and Its Last Key Which We Are Looking For Then Thats Our Final Value
 				if (keys[keyIndex] == currentObject.Key && keyIndex == keys.Length-1)
 				{
 					searchKeyValue = currentObject.Value.ToString();
@@ -56,7 +62,8 @@
 				if (!(currentObject.Value is KeyValuePair<string, object>))
 					break;
 
-				keyIndex++;
+				if (matchFoundStart) 
+					keyIndex++;
 				currentObject = (KeyValuePair<string, object>)currentObject.Value;
 			}
 
