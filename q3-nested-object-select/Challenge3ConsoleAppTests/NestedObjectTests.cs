@@ -132,5 +132,16 @@ namespace Challenge3ConsoleApp.Tests
 			Assert.IsTrue(string.IsNullOrEmpty(searchKeyValue), "If Incorrect Keys Provided, it should return Empty.");
 		}
 
+		[TestMethod()]
+		public void Test_Valid_Key_Return_Start_From_Middle_a()
+		{
+			var objects = createTestObjects('a', 5);
+			var keys = createTestKeys('c', 3);
+
+			var searchKeyValue = _nestedObjectInstance.GetSearchKeyValue(objects, keys);
+
+			Assert.AreEqual(searchKeyValue, "f", "Valid Value f Should Be Returned.");
+		}
+
 	}
 }
